@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
   files = FileList['FrameworkSource/SM4SDK/FrameworkSource/*.{h,m,c}']
   s.resources = "FrameworkSource/VMNSocialMediaSDKResources.bundle"
   s.dependency 'JSONKit', '~> 1.4'
-  s.frameworks   = 'AdSupport', 'Social', 'SystemConfiguration', 'Accounts',
-                   'Twitter', 'UIKit', 'Foundation', 'CoreGraphics', 'CoreFoundation'
+  s.weak_frameworks = 'Accounts', 'AdSupport', 'Social'
+  s.frameworks   = 'SystemConfiguration','Twitter', 'UIKit', 'Foundation', 'CoreGraphics', 'CoreFoundation'
 end
