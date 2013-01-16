@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = 'VMNSocialMedia-iOS-SDK'
   s.version      = '1.0'
-  s.license      = 'BSD'
+  s.license      = ''
   s.platform     = :ios
   s.summary      = 'The SM4 SDK offers a drop-in solution for adding a social community into an app. The SDK offers a convenient layer of abstraction for API services exposed by Zeebox, Flux, Twitter and Facebook, facilitating development, integration, testing and support.'
   s.homepage     = 'https://github.com/mtvn-player/socialmedia-lib-ios'
