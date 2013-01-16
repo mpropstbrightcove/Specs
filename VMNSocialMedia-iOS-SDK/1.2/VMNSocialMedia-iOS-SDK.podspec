@@ -8,6 +8,7 @@ Pod::Spec.new do |s|
   s.author       = { 'Viacom Media Networks' => 'isaac.dasilva@viacom.com' }
   s.source       = { :git => 'https://github.com/mtvn-player/socialmedia-lib-ios.git', :tag => 'v1.0' }
   files = FileList['FrameworkSource/SM4SDK/FrameworkSource/*.{h,m,c}']
+  s.source_files = files
   s.resources = "FrameworkSource/VMNSocialMediaSDKResources.bundle"
   s.dependency 'JSONKit', '~> 1.4'
   s.weak_frameworks = 'Accounts', 'AdSupport', 'Social'
