@@ -14,5 +14,5 @@ Pod::Spec.new do |s|
   
   s.libraries    = 'z', 'sqlite3.0'
   s.frameworks   = 'AdSupport', 'Social', 'SystemConfiguration', 'Accounts',
-                   'Twitter', 'UIKit', 'Foundation', 'CoreGraphics', 'CoreFoundation
+                   'Twitter', 'UIKit', 'Foundation', 'CoreGraphics', 'CoreFoundation'
 end
