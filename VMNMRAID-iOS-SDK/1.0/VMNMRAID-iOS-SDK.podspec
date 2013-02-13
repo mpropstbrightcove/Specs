@@ -11,6 +11,6 @@ Pod::Spec.new do |s|
   s.preserve_paths = 'Framework/libViacomMRAID.a'
   s.resources = 'Framework/*.{png,js,html}'
   s.library = 'ViacomMRAID', 'z'
-  s.ios.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/Framework"' }
+  s.ios.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/VMNMRAID-iOS-SDK/Framework"' }
   s.source_files  = 'Framework/*.{h,m}'
 end
