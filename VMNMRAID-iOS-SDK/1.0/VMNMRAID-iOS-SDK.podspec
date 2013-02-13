@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name      = 'VMNMRAID'
+  s.name      = 'VMNMRAID-iOS-SDK'
   s.version   = '1.0'
   s.platform  = :ios
   s.summary   = 'MRAID SDK for iOS'
