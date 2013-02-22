@@ -27,19 +27,19 @@ Pod::Spec.new do |s|
   end
   s.subspec 'FreeWheelBrightcove' do |freebright|
     freebright.source_files = 'FrameworkSource/BCFreeWheel/*.{h,a}'
-	freebright.library - 'BCFreeWheelPlugin'
+	freebright.library = 'BCFreeWheelPlugin'
 	freebright.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel/', 'LIBRARY_SEARCH_PATHS' => '$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel/' }
   end
   s.subspec 'Omniture' do |omn|
 	files = FileList['FrameworkSource/BCOmniture/*.{h,a}']
     omn.source_files = files
-	omn.library - 'AppMeasurement', 'BCOmniturePlugin'
+	omn.library = 'AppMeasurement', 'BCOmniturePlugin'
 	omn.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCOmniture/', 'LIBRARY_SEARCH_PATHS' => '$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCOmniture/' }
 	omn.frameworks = 'CoreMedia', 'AVFoundation'
   end
   s.subspec 'Akamai' do |aka|
     aka.source_files = 'FrameworkSource/AkamMAlibs/headers/*.{h}', 'FrameworkSource/AkamMAlibs/libs/**/*.{a}' 
-	aka.library - 'AKAMMediaExtensions'
+	aka.library = 'AKAMMediaExtensions'
 	aka.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/AkamMAlibs/headers/', 'LIBRARY_SEARCH_PATHS' => '$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/AkamMAlibs/libs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) $(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/AkamMAlibs/libs/Debug-iphoneos', 'OTHER_LDFLAGS' => '-lAKAMMediaExtensions' }
 	aka.frameworks = 'CoreMedia', 'AVFoundation'
   end
