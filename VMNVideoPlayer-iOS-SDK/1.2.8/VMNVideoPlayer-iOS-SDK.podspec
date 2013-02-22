@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
 	br.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BrightcoveiOSSDK', 'LIBRARY_SEARCH_PATHS' => '$(SRCROOT)/Pods/**' }
 	br.frameworks = 'CoreMedia', 'AVFoundation'
   end
-  s.subspec 'VMNPlayer' do |vmnplayer|
+  s.subspec 'VMNVideoPlayer' do |vmnplayer|
     vmnplayer.source_files = 'FrameworkSource/libVMNVideoPlayeriOSSDK/VMNVideoPlayer.framework/**'
 	vmnplayer.resources = 'FrameworkSource/libVMNVideoPlayeriOSSDK/VMNVideoPlayer.bundle'
 	vmnplayer.frameworks = 'CoreText'
