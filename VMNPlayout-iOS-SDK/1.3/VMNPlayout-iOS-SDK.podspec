@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.license   = ''
   s.author    = { 'Viacom' =>  'http://developer.viacom.com/mdp_download/vmnplayout-sdk-ios/' }             
   s.source    = { :git => 'https://github.com/mtvn-player/VMNPlayoutSDK-iOS.git', :tag => '1.3' }
-  s.source_files  = 'FrameworkSource'
+  s.source_files  = 'FrameworkSource/VMNPlayoutSDK.framework/**'
   s.requires_arc = false
   s.frameworks   = 'UIKit', 'Foundation', 'AVFoundation'
 end
