@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.requires_arc = false
   s.subspec 'Brightcove' do |br|
     br.source_files = 'FrameworkSource/BrightcoveiOSSDK/*.{h,a}'
-	br.library = 'BrightcoveiOSSDK'
+	br.library = 'BCiOSSDK'
 	br.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BrightcoveiOSSDK', 'LIBRARY_SEARCH_PATHS' => '$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BrightcoveiOSSDK/' }
 	br.frameworks = 'CoreMedia', 'AVFoundation'
   end
