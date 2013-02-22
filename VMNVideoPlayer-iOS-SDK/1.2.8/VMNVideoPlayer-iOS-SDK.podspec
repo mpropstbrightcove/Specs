@@ -38,4 +38,6 @@ Pod::Spec.new do |s|
 	aka.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '$(SRCROOT)/Pods/** $(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/AkamMAlibs/libs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) $(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/AkamMAlibs/libs/Debug-iphoneos', 'OTHER_LDFLAGS' => '-lAKAMMediaExtensions' }
 	aka.frameworks = 'CoreMedia', 'AVFoundation'
   end
+  s.frameworks   = 'MessageUI', 'SystemConfiguration', 'CoreText', 'CoreLocation', 'QuartzCore', 'MediaPlayer', 'CoreMedia', 'AVFoundation', 'UIKit', 'Foundation', 'CoreGraphics'
 end
+
