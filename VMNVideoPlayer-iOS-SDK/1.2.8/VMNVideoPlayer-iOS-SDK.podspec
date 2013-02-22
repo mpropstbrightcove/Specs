@@ -10,33 +10,34 @@ Pod::Spec.new do |s|
   s.requires_arc = false
   s.subspec 'Brightcove' do |br|
     br.source_files = 'FrameworkSource/BrightcoveiOSSDK/*.{h,a}'
-	br.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/VMNVideoPlayer-iOS-SDK/FrameworkSource/BrightcoveiOSSDK', 'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/VMNVideoPlayer-iOS-SDK/FrameworkSource/BrightcoveiOSSDK' }
+	br.library = 
+	br.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BrightcoveiOSSDK', 'LIBRARY_SEARCH_PATHS' => '$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BrightcoveiOSSDK/' }
 	br.frameworks = 'CoreMedia', 'AVFoundation'
   end
   s.subspec 'VMNVideoPlayer' do |vmnplayer|
     vmnplayer.source_files = 'FrameworkSource/libVMNVideoPlayeriOSSDK/VMNVideoPlayer.framework/**'
 	vmnplayer.resources = 'FrameworkSource/libVMNVideoPlayeriOSSDK/VMNVideoPlayer.bundle'
-	vmnplayer.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '$(PODS_ROOT)/VMNVideoPlayer-iOS-SDK/FrameworkSource/libVMNVideoPlayeriOSSDK', 'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/**' }
+	vmnplayer.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/libVMNVideoPlayeriOSSDK', 'LIBRARY_SEARCH_PATHS' => '$(SRCROOT)/Pods/**' }
 	vmnplayer.frameworks = 'CoreText'
   end
   s.subspec 'FreeWheel' do |free|
     free.source_files = 'FrameworkSource/BCFreeWheel/AdManager.framework/**'
-	free.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2 $(PODS_ROOT)/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel', 'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/**', 'OTHER_LDFLAGS' => '-ObjC', 'FRAMEWORK_SEARCH_PATHS' => '$(PODS_ROOT)/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel' }
+	free.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2 $(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel', 'LIBRARY_SEARCH_PATHS' => '$(SRCROOT)/Pods/**', 'OTHER_LDFLAGS' => '-ObjC', 'FRAMEWORK_SEARCH_PATHS' => '$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel' }
 	free.frameworks = 'UIKit', 'CoreGraphics', 'QuartzCore', 'MediaPlayer', 'CoreLocation'
   end
   s.subspec 'FreeWheelBrightcove' do |freebright|
     freebright.source_files = 'FrameworkSource/BCFreeWheel/*.{h,a}'
-	freebright.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel', 'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/**' }
+	freebright.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel', 'LIBRARY_SEARCH_PATHS' => '$(SRCROOT)/Pods/**' }
   end
   s.subspec 'Omniture' do |omn|
 	files = FileList['FrameworkSource/BCOmniture/*.{h,a}']
     omn.source_files = files
-	omn.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCOmniture', 'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/**' }
+	omn.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCOmniture', 'LIBRARY_SEARCH_PATHS' => '$(SRCROOT)/Pods/**' }
 	omn.frameworks = 'CoreMedia', 'AVFoundation'
   end
   s.subspec 'Akamai' do |aka|
     aka.source_files = 'FrameworkSource/AkamMAlibs/headers/*.{h}', 'FrameworkSource/AkamMAlibs/libs/**/*.{a}' 
-	aka.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/** $(PODS_ROOT)/VMNVideoPlayer-iOS-SDK/FrameworkSource/AkamMAlibs/libs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) $(PODS_ROOT)/VMNVideoPlayer-iOS-SDK/FrameworkSource/AkamMAlibs/libs/Debug-iphoneos', 'OTHER_LDFLAGS' => '-lAKAMMediaExtensions' }
+	aka.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '$(SRCROOT)/Pods/** $(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/AkamMAlibs/libs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) $(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/AkamMAlibs/libs/Debug-iphoneos', 'OTHER_LDFLAGS' => '-lAKAMMediaExtensions' }
 	aka.frameworks = 'CoreMedia', 'AVFoundation'
   end
   s.frameworks   = 'MessageUI', 'SystemConfiguration', 'CoreText', 'CoreLocation', 'QuartzCore', 'MediaPlayer', 'CoreMedia', 'AVFoundation', 'UIKit', 'Foundation', 'CoreGraphics'
