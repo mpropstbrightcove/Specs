@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
 	free.frameworks = 'UIKit', 'CoreGraphics', 'QuartzCore', 'MediaPlayer', 'CoreLocation'
   end
   s.subspec 'FreeWheelBrightcove' do |freebright|
-    freebright.source_files = 'FrameworkSource/BCFreeWheel/*.{a}'
+    freebright.source_files = 'FrameworkSource/BCFreeWheel/*.{h,a}'
 	freebright.library = 'BCFreeWheelPlugin'
 	freebright.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel"', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel"' }
   end
