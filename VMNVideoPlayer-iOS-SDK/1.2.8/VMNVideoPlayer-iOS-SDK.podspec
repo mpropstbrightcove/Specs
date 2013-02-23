@@ -22,14 +22,14 @@ Pod::Spec.new do |s|
   end
   s.subspec 'FreeWheel' do |free|
     free.source_files = 'FrameworkSource/BCFreeWheel/AdManager.framework/**'
-	free.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SDKROOT)/usr/include/libxml2"', 'OTHER_LDFLAGS' => '-ObjC', 'FRAMEWORK_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel"' }
+	free.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SDKROOT)/usr/include/libxml2"', 'OTHER_LDFLAGS' => '-ObjC', 'FRAMEWORK_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel"', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel"/**' }
 	free.frameworks = 'UIKit', 'CoreGraphics', 'QuartzCore', 'MediaPlayer', 'CoreLocation'
   end
   s.subspec 'FreeWheelBrightcove' do |freebright|
     freebright.source_files = 'FrameworkSource/BCFreeWheel/*.{h,a}'
     freebright.dependency 'VMNVideoPlayer-iOS-SDK/FreeWheel'
 	freebright.library = 'BCFreeWheelPlugin'
-	freebright.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel"', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel"' }
+	freebright.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel"', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel"/**' }
   end
   s.subspec 'Omniture' do |omn|
 	files = FileList['FrameworkSource/BCOmniture/*.{h,a}']
