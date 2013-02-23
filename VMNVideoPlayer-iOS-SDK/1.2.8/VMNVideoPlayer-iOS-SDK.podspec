@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
 	files = FileList['FrameworkSource/BCOmniture/*.{h,a}']
     omn.source_files = files
 	omn.library = 'AppMeasurement', 'BCOmniturePlugin'
-	omn.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCOmniture"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCOmniture"/**' }
+	omn.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCOmniture/"', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCOmniture/"' }
 	omn.frameworks = 'CoreMedia', 'AVFoundation'
   end
   s.subspec 'Akamai' do |aka|
