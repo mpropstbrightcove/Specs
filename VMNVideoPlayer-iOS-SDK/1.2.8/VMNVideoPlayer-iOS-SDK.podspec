@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.subspec 'VMNVideoPlayer' do |vmnplayer|
     vmnplayer.source_files = 'FrameworkSource/libVMNVideoPlayeriOSSDK/**'
 	vmnplayer.resources = 'FrameworkSource/libVMNVideoPlayeriOSSDK/VMNVideoPlayer.bundle'
-	vmnplayer.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/libVMNVideoPlayeriOSSDK"/** "$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/libVMNVideoPlayeriOSSDK/VMNVideoPlayer.framework"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/libVMNVideoPlayeriOSSDK"/**', 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/libVMNVideoPlayeriOSSDK/VMNVideoPlayer.framework/Headers"/**' }
+	vmnplayer.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/libVMNVideoPlayeriOSSDK"/** "$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/libVMNVideoPlayeriOSSDK/VMNVideoPlayer.framework/Versions/A"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/libVMNVideoPlayeriOSSDK"/**', 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/libVMNVideoPlayeriOSSDK/VMNVideoPlayer.framework/Headers"/**' }
 	vmnplayer.frameworks = 'CoreText'
   end
   s.subspec 'FreeWheel' do |free|
