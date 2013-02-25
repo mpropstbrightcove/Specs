@@ -10,6 +10,5 @@ Pod::Spec.new do |s|
   s.requires_arc = false
   s.source_files  = 'FrameworkSource/**'
   s.preserve_paths = 'VMNPlayoutSDK.framework'
-  s.frameworks   = 'UIKit', 'Foundation', 'AVFoundation'
   s.dependency 'SBJson', '3.0.4'
 end
