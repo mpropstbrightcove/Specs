@@ -12,5 +12,5 @@ Pod::Spec.new do |s|
   s.preserve_paths = 'VMNPlayoutSDK.framework'
   s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/VMNPlayout-iOS-SDK/FrameworkSource"/**', 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/VMNPlayout-iOS-SDK/FrameworkSource"/**', 'HEADER_SEARCH_PATHS' => '"$(PODS_ROOT)/VMNPlayout-iOS-SDK/FrameworkSource/VMNPlayoutSDK.framework/Headers"/**', 'OTHER_LDFLAGS' => '-force_load "$(PODS_ROOT)/VMNPlayout-iOS-SDK/FrameworkSource/VMNPlayoutSDK.framework/VMNPlayoutSDK"' }
   s.frameworks   = 'UIKit', 'Foundation', 'AVFoundation'
-  s.dependency 'SBJson', :git => 'https://github.com/stig/json-framework.git', :tag => 'v3.0.4'
+  s.dependency 'SBJson', :git => 'https://github.com/stig/json-framework.git', :tag => '3.0.4'
 end
