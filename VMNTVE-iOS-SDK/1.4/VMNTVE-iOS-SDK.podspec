@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.summary      = 'TVE Authentication Component for Native iOS represents a library for iOS devices. This is solution for TV Everywhere offers cross-domain single-sign-on authentication and authorization.'
   s.homepage     = 'https://github.com/mtvn-player/VMNCST-iOS.git'
-  s.author       = { 'Viacom Media Networks' => 'isaac.dasilva@viacom.com' }
+  s.author       = { 'Viacom Media Networks' => 'raman.nanda@viacommix.com' }
   s.source       = { :git => 'https://github.com/mtvn-player/VMNTVE-iOS.git', :tag => 'v1.4' }
   
   s.requires_arc = true
