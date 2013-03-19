@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.preserve_paths = 'FrameworkSource/lib/libTVEAuthComponent-iOS.a'
   s.resources = 'FrameworkSource/**/*.{png,js,html,plist,bundle}'
   s.library = 'libTVEAuthComponent-iOS', 'z'
-  s.ios.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/VMNTVE-iOS-SDK/FrameworkSource/**"' }
+  s.ios.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(PODS_ROOT)/VMNVideoPlayer-iOS-SDK/VMNTVE-iOS-SDK/FrameworkSource"/**', 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/VMNTVE-iOS-SDK/FrameworkSource"/**' }
   s.source_files  = 'FrameworkSource/**/*.{h,m}'
 
 end
