@@ -13,4 +13,5 @@ Pod::Spec.new do |s|
   s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/VMNTVE-iOS-SDK/' }
   s.frameworks = 'QuartzCore', 'SystemConfiguration', 'Security', 'CoreText'
   s.source_files = '*.h'
+  s.dependency 'TTTAttributedLabel', '~> 1.6.2'
 end
