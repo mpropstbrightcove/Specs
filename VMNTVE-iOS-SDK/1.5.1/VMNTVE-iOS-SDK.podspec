@@ -10,8 +10,8 @@ Pod::Spec.new do |s|
   s.preserve_paths = 'ComponentSource/lib/libTVEAuthComponent-iOS.a'
   s.resources = 'ComponentSource/config/TVEAuthComponentConfig.plist', 'ComponentSource/config/adobepass.p12', 'ComponentSource/bundle/TVEAuthResources.bundle'
   s.libraries = 'TVEAuthComponent-iOS', 'xml2'
-  s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/VMNTVE-iOS-SDK/' }
+  s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/VMNTVE-iOS-SDK/ComponentSource/lib/' }
   s.frameworks = 'QuartzCore', 'SystemConfiguration', 'Security', 'CoreText'
-  s.source_files = '*.h'
+  s.source_files = 'ComponentSource/headers/*.h'
   s.dependency 'TTTAttributedLabel', '~> 1.6.2'
 end
