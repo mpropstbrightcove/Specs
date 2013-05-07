@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage  = ''
   s.license   = ''
   s.author    = { 'Brigthcove' =>  '' }             
-  s.source    = { :git => 'https://github.com/mtvn-player/VMNVideoPlayer-iOS.git', :tag => '1.2.29' }
+  s.source    = { :git => 'https://github.com/mtvn-player/VMNVideoPlayer-iOS.git', :tag => "#{s.version}" }
   s.requires_arc = false
   s.subspec 'Brightcove' do |br|
     br.source_files = 'FrameworkSource/BrightcoveiOSSDK/*.{h,a}'
@@ -15,17 +15,19 @@ Pod::Spec.new do |s|
   	br.frameworks = 'CoreMedia', 'AVFoundation'
   end
   s.subspec 'VMNVideoPlayer' do |vmnplayer|
-    vmnplayer.source_files = 'FrameworkSource/libVMNVideoPlayeriOSSDK/*.{h,m}'
+    framework_path = 'FrameworkSource/libVMNVideoPlayeriOSSDK/VMNVideoPlayer.framework'
+    vmnplayer.source_files = "#{framework_path}/Headers/*.h"
   	vmnplayer.resources = 'FrameworkSource/libVMNVideoPlayeriOSSDK/VMNVideoPlayer.bundle'
-  	vmnplayer.preserve_paths = 'FrameworkSource/libVMNVideoPlayeriOSSDK/VMNVideoPlayer.framework'
-  	vmnplayer.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/VMNVideoPlayer-iOS-SDK/FrameworkSource/libVMNVideoPlayeriOSSDK/VMNVideoPlayer"', 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/VMNVideoPlayer-iOS-SDK/FrameworkSource/libVMNVideoPlayeriOSSDK"/**', 'HEADER_SEARCH_PATHS' => '"$(PODS_ROOT)/VMNVideoPlayer-iOS-SDK/FrameworkSource/libVMNVideoPlayeriOSSDK/VMNVideoPlayer.framework/Headers"/**'}
+  	vmnplayer.preserve_paths = framework_path
+  	vmnplayer.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/VMNVideoPlayer-iOS-SDK/FrameworkSource/libVMNVideoPlayeriOSSDK"'}
   	vmnplayer.frameworks = 'CoreText', 'VMNVideoPlayer'
   end
   s.subspec 'FreeWheel' do |free|
-    free.source_files = 'FrameworkSource/BCFreeWheel/*.{h,m}'
+    framework_path = 'FrameworkSource/BCFreeWheel/AdManager.framework'
+    free.source_files = "#{framework_path}/Headers/*.h"
   	free.library = 'xml2'
-    free.preserve_paths = 'FrameworkSource/BCFreeWheel/AdManager.framework'
-  	free.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SDKROOT)/usr/include/libxml2" "$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel"/** "$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel/AdManager.framework/Headers"/** "$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel/AdManager.framework"/**', 'OTHER_LDFLAGS' => '-ObjC', 'FRAMEWORK_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel"', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel"/**' }
+    free.preserve_paths = framework_path
+  	free.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel/AdManager"', 'OTHER_LDFLAGS' => '-ObjC'}
   	free.frameworks = 'UIKit', 'CoreGraphics', 'QuartzCore', 'MediaPlayer', 'CoreLocation', 'EventKit', 'AdManager'
   end
   s.subspec 'FreeWheelBrightcove' do |freebright|
