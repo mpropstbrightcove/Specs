@@ -5,9 +5,9 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.summary      = 'The Cross-Selling-Tool (CST) is a platform component that enables brands to promote related products within any host application.'
   s.homepage     = 'https://github.com/mtvn-player/VMNCST-iOS.git'
-  s.author       = { 'Viacom Media Networks' => 'isaac.dasilva@viacom.com' }
+  s.author       = { 'Viacom Media Networks' => 'Randy.Weinstein@mtvnstaff.com' }
   s.source       = { :git => 'https://github.com/mtvn-player/VMNCST-iOS.git', :tag => 'v1.3' }
-  files = FileList['FrameworkSource/CST5/CSTLib/*.{h,m,c}']
+  files = FileList['SampleApp-StaticFramework/*.{h,m,c,pdf,css}']
   s.source_files = files
   s.frameworks   = 'SystemConfiguration','UIKit', 'Foundation', 'CoreGraphics', 'CoreFoundation'
 end
