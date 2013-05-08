@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.homepage     = 'https://github.com/mtvn-player/VMNCST-iOS.git'
   s.author       = { 'Viacom Media Networks' => 'Randy.Weinstein@mtvnstaff.com' }
   s.source       = { :git => 'https://github.com/mtvn-player/VMNCST-iOS.git', :tag => 'v1.3' }
-  files = FileList['SampleApp-StaticFramework/*.{h,m,c,pdf,css}']
+  files = FileList['SampleApp-StaticFramework/VMNCSTFramework.framework/*.{*}']
   s.source_files = files
   s.frameworks   = 'SystemConfiguration','UIKit', 'Foundation', 'CoreGraphics', 'CoreFoundation'
 end
