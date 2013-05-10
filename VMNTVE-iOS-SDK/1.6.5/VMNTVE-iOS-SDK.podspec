@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.summary      = 'TVE Authentication Component for Native iOS represents a library for iOS devices. This is solution for TV Everywhere offers cross-domain single-sign-on authentication and authorization.'
   s.homepage     = "https://github.com/mtvn-player/VMNTVE-iOS.git"
   s.author       = 'TVE Team'
-  s.source       = { :git => "https://github.com/mtvn-player/VMNTVE-iOS.git", :tag => "v1.6.2" }
+  s.source       = { :git => "https://github.com/mtvn-player/VMNTVE-iOS.git", :tag => "v1.6.5" }
   s.preserve_paths = 'ComponentSource/lib/libTVEAuthComponent-iOS.a'
   s.resources = 'ComponentSource/config/adobepass.p12', 'ComponentSource/bundle/TVEAuthResources.bundle'
   s.libraries = 'TVEAuthComponent-iOS', 'xml2'
