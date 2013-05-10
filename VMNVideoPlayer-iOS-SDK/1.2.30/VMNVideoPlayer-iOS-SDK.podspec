@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
     free.source_files = "#{framework_path}/Headers/*.h"
     free.library = 'xml2'
     free.preserve_paths = framework_path
-    free.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel/AdManager"', 'OTHER_LDFLAGS' => '-ObjC'}
+    free.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel"', 'OTHER_LDFLAGS' => '-ObjC'}
     free.frameworks = 'UIKit', 'CoreGraphics', 'QuartzCore', 'MediaPlayer', 'CoreLocation', 'EventKit', 'AdManager'
   end
   s.subspec 'FreeWheelBrightcove' do |freebright|
