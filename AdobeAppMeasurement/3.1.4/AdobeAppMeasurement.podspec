@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
   s.requires_arc = false
   s.preserve_paths = 'admsAppLibrary.a'
   s.library = 'admsAppLibrary', 'z'
-  s.ios.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/ AdobeAppMeasurementSDK/"' }
+  s.ios.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/ AdobeAppMeasurement/"' }
   s.source_files  = '*.{h,m}'
 end
