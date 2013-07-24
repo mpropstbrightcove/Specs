@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name      = 'NielsenID3Meter-iOS-SDK'
-  s.version   = '2.0.26a'
+  s.version   = '2.0.26'
   s.platform  = :ios
   s.summary   = 'Nielsen ID3 Meter SDK for iOS'
   s.homepage  = ''
