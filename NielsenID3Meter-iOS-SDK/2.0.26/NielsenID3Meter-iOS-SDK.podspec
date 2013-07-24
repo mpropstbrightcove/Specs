@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.requires_arc = false
   s.preserve_paths = 'NielsenID3Meter.framework'
   s.library = 'NielsenID3Meter', 'z'
-  s.ios.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/ NielsenID3Meter-iOS-SDK/"' }
-  s.source_files  = '*.{h,m}'
+  s.ios.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/NielsenID3Meter-iOS-SDK/NielsenID3Meter.framework/"' }
+  s.source_files  = 'Headers/*.{h,m}'
   s.frameworks   = 'Security', 'SystemConfiguration'
 end
