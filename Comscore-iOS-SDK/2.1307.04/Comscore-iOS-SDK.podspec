@@ -11,6 +11,6 @@ Pod::Spec.new do |s|
   s.preserve_paths = 'libcomScore.a'
   s.library = 'libcomScore', 'z'
   s.ios.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/Comscore-iOS-SDK/"' }
-  s.source_files  = '*.{h,m}'
+  s.source_files  = 'headers/*.{h,m}'
   s.frameworks   = 'Security', 'SystemConfiguration'
 end
