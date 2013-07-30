@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.requires_arc = false
   s.preserve_paths = 'libBentoLib.a'
   s.library = 'libBentoLib', 'z'
-  s.ios.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/Bento-iOS-Lib/Products/Release-iphoneos/"' }
+  s.ios.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/Bento-iOS-Lib/"' }
   s.source_files  = 'Products/Release-iphoneos/include/BentoLib/*.{h,m}'
   s.frameworks    = 'Foundation', 'Security', 'SystemConfiguration'
 end
