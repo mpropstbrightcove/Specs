@@ -8,9 +8,10 @@ Pod::Spec.new do |s|
   s.author    = { 'Viacom' =>  'http://developer.viacom.com' }             
   s.source    = { :git => 'https://github.com/mtvn-player/Bento-iOS-Lib.git', :tag => "#{s.version}" }
   s.requires_arc = false
-  s.preserve_paths = 'libBentoLib.a'
-  s.library = 'libBentoLib', 'z'
-  s.ios.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/Bento-iOS-Lib/"' }
-  s.source_files  = 'Products/Release-iphoneos/include/BentoLib/*.{h,m}'
-  s.frameworks    = 'Foundation', 'Security', 'SystemConfiguration'
+  s.ios.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/Bento-iOS-Lib/BentoLib"' }
+  s.source_files  = 'BentoLib/*.{h,m}'
+  s.frameworks = 'Foundation', 'Security', 'SystemConfiguration'
+  s.dependency 'AdobeAppMeasurement', '3.1.4'
+  s.dependency 'Comscore-iOS-SDK', '2.1307.04'
+  s.dependency 'NielsenID3Meter-iOS-SDK', '2.0.27'
 end
