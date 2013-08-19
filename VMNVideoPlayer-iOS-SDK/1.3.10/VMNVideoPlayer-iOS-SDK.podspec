@@ -37,8 +37,7 @@ Pod::Spec.new do |s|
     freebright.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel"/**' }
   end
   s.subspec 'Omniture' do |omn|
-    files = FileList['FrameworkSource/BCOmniture/*.{h,a}']
-      omn.source_files = files
+    omn.source_files = 'FrameworkSource/BCOmniture/*.{h,a}'
     omn.library = 'AppMeasurement', 'BCOmniturePlugin'
     omn.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCOmniture"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCOmniture"/**' }
     omn.frameworks = 'CoreMedia', 'AVFoundation'
