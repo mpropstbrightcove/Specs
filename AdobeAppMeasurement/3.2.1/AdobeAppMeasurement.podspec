@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name      = 'AdobeAppMeasurement'
-  s.version   = '3.2.0'
+  s.version   = '3.2.1'
   s.platform  = :ios
   s.summary   = 'AdobeAppMeasurement for iOS'
   s.homepage  = ''
   s.license   = ''
   s.author    = { 'Viacom' =>  'http://developer.viacom.com' }             
-  s.source    = { :git => 'https://github.com/mtvn-player/AdobeAppMeasurementSDK-iOS.git', :tag => '3.2.0' }
+  s.source    = { :git => 'https://github.com/mtvn-player/AdobeAppMeasurementSDK-iOS.git', :tag => '3.2.1' }
   s.requires_arc = false
   s.preserve_paths = 'libadmsAppLibrary.a'
   s.library = 'admsAppLibrary', 'z'
