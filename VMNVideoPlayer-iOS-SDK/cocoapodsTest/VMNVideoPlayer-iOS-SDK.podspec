@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name      = 'VMNVideoPlayer-iOS-SDK'
-  s.version   = '1.3.13'
+  s.version   = 'cocoapodsTest'
   s.platform  = :ios
   s.summary   = "The VMNVideoPlayer SDK for iOS."
   s.homepage  = ''
