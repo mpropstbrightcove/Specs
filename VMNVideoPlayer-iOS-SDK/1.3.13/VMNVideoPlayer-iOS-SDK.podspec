@@ -45,7 +45,7 @@ Pod::Spec.new do |s|
   end
   s.subspec 'Akamai' do |aka|
     aka.source_files = 'FrameworkSource/AkamMAlibs/headers/*.{h}', 'FrameworkSource/AkamMAlibs/libs/**/*.{a}' 
-    aka.library = 'AKAMMediaExtensions'
+    aka.library = 'AKAMMediaExtensions-extra'
     aka.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/AkamMAlibs/headers"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/AkamMAlibs/libs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)" "$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/AkamMAlibs/libs/Debug-iphoneos"/**', 'OTHER_LDFLAGS' => '-lAKAMMediaExtensions-AV' }
     aka.frameworks = 'CoreMedia', 'AVFoundation'
   end
