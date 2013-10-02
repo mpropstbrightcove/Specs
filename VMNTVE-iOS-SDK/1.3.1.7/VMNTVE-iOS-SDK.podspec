@@ -18,5 +18,4 @@ Pod::Spec.new do |s|
   s.dependency 'MBProgressHUD', '~> 0.5'
   s.dependency 'SBJson', '~> 3.0.4'
   s.dependency 'VMNSocialMedia-iOS-SDK', '~> 1.2.0'
-  s.dependency 'Facebook-iOS-SDK', '3.1.1'
 end
