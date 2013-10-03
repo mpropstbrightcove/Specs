@@ -41,7 +41,7 @@ Pod::Spec.new do |s|
   s.subspec 'BCCOmniture' do |bccomn|
     bccomn.source_files = 'FrameworkSource/BCCOmniturePlugin/*.{h,a}'
     bccomn.library = 'admsAppLibrary', 'libBCCOmniturePluginLib'
-    bccomn.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCOmniture"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniturePlugin"/**' }
+    bccomn.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCOmniture"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniturePlugin"/**/*' }
     bccomn.frameworks = 'CoreMedia', 'AVFoundation'
   end
   s.subspec 'Akamai' do |aka|
