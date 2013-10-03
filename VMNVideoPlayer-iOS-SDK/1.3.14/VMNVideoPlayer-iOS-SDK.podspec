@@ -6,7 +6,8 @@ Pod::Spec.new do |s|
   s.homepage  = ''
   s.license   = ''
   s.author    = { 'Brightcove' =>  '' }             
-  s.source    = { :git => 'https://github.com/mtvn-player/VMNVideoPlayer-iOS.git', :tag => "#{s.version}" }
+  #s.source    = { :git => 'https://github.com/mtvn-player/VMNVideoPlayer-iOS.git', :tag => "#{s.version}" }
+  s.source    = { :git => 'https://github.com/mpropstbrightcove/VMNVideoPlayer-iOS.git', :tag => "#{s.version}" }
   s.requires_arc = false
   s.subspec 'Brightcove' do |br|
     br.source_files = 'FrameworkSource/BrightcoveiOSSDK/*.{h,a}'
