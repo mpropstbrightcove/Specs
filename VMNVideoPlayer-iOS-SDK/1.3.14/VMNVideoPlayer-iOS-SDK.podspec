@@ -48,7 +48,7 @@ Pod::Spec.new do |s|
     omn.source_files = 'FrameworkSource/BCCOmniturePlugin/ADMS_AppLibrary/*.{h,a}'
     omn.library = 'admsAppLibrary'
     omn.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniture/ADMS_AppLibrary"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniture/ADMS_AppLibrary"/**' }
-    omn.frameworks = 'CoreMedia', 'AVFoundation'
+    omn.frameworks = 'admsAppLibrary', 'AVFoundation'
   end
   s.subspec 'Akamai' do |aka|
     aka.source_files = 'FrameworkSource/AkamMAlibs/headers/*.{h}', 'FrameworkSource/AkamMAlibs/libs/**/*.{a}' 
