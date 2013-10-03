@@ -6,8 +6,7 @@ Pod::Spec.new do |s|
   s.homepage  = ''
   s.license   = ''
   s.author    = { 'Brightcove' =>  '' }             
-#  s.source    = { :git => 'https://github.com/mtvn-player/VMNVideoPlayer-iOS.git', :tag => "#{s.version}" }
-  s.source    = { :git => 'https://github.com/mpropstbrightcove/VMNVideoPlayer-iOS.git', :tag => "#{s.version}" }
+  s.source    = { :git => 'https://github.com/mtvn-player/VMNVideoPlayer-iOS.git', :tag => "#{s.version}" }
   s.requires_arc = false
   s.subspec 'Brightcove' do |br|
     br.source_files = 'FrameworkSource/BrightcoveiOSSDK/*.{h,a}'
@@ -40,9 +39,15 @@ Pod::Spec.new do |s|
   end
   s.subspec 'BCCOmniture' do |bccomn|
     bccomn.source_files = 'FrameworkSource/BCCOmniturePlugin/*.{h,a}'
-    bccomn.library = 'admsAppLibrary', 'libBCCOmniturePluginLib'
-    bccomn.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCOmniture"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniturePlugin"/**/*' }
+    bccomn.library = 'libBCCOmniturePluginLib'
+    bccomn.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniture"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniturePlugin"/**' }
     bccomn.frameworks = 'CoreMedia', 'AVFoundation'
+  end
+  s.subspec 'Omniture' do |omn|
+    omn.source_files = 'FrameworkSource/BCCOmniturePlugin/ADMS_AppLibrary/*.{h,a}'
+    omn.library = 'admsAppLibrary'
+    omn.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniture/ADMS_AppLibrary"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniture/ADMS_AppLibrary"/**' }
+    omn.frameworks = 'CoreMedia', 'AVFoundation'
   end
   s.subspec 'Akamai' do |aka|
     aka.source_files = 'FrameworkSource/AkamMAlibs/headers/*.{h}', 'FrameworkSource/AkamMAlibs/libs/**/*.{a}' 
