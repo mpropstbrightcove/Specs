@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
   end
   s.subspec 'BCCOmniture' do |bccomn|
     bccomn.source_files = 'FrameworkSource/BCCOmniturePlugin/*.{h,a}'
-    bccomn.library = 'libBCCOmniturePluginLib'
+    #bccomn.library = 'libBCCOmniturePluginLib'
     bccomn.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniture"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniturePlugin"/**' }
     #bccomn.frameworks =  'libBCCOmniturePluginLib'
   end
