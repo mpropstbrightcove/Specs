@@ -46,7 +46,7 @@ Pod::Spec.new do |s|
   end
   s.subspec 'Omniture' do |omn|
     omn.source_files = 'FrameworkSource/BCCOmniturePlugin/ADMS_AppLibrary/*.{h,a}'
-    omn.library = 'admsAppLibrary'
+    #omn.library = 'admsAppLibrary'
 	#omn.dependency
     omn.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniture/ADMS_AppLibrary"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniture/ADMS_AppLibrary"/**' }
     omn.frameworks = 'AVFoundation'
