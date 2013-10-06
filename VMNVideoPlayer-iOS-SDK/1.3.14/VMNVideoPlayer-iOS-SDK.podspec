@@ -38,17 +38,17 @@ Pod::Spec.new do |s|
     freebright.library = 'BCFreeWheelPlugin'
     freebright.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel"/**' }
   end
-  s.subspec 'BCCOmniture' do |bccomn|
-    bccomn.source_files = 'FrameworkSource/BCCOmniturePlugin/*.{h,a}'
-    bccomn.vendored_libraries = 'libBCCOmniturePluginLib'
-    bccomn.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniturePlugin"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniturePlugin"/**' }
+#  s.subspec 'BCCOmniture' do |bccomn|
+#    bccomn.source_files = 'FrameworkSource/BCCOmniturePlugin/*.{h,a}'
+#    bccomn.vendored_libraries = 'libBCCOmniturePluginLib'
+#    bccomn.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniturePlugin"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniturePlugin"/**' }
     #bccomn.frameworks =  'libBCCOmniturePluginLib'
-  end
-  s.subspec 'Omniture' do |omn|
-    omn.source_files = 'FrameworkSource/BCCOmniturePlugin/ADMS_AppLibrary/*.{h,a}'
-    #omn.library = 'admsAppLibrary'
+#  end
+  s.subspec 'ADMS_Omniture' do |omn|
+    omn.source_files = 'FrameworkSource/ADMS_AppLibrary/*.{h,a}'
+    omn.library = 'admsAppLibrary'
 	#omn.dependency
-    omn.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniturePlugin/ADMS_AppLibrary"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniturePlugin/ADMS_AppLibrary"/**' }
+    omn.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/ADMS_AppLibrary"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/ADMS_AppLibrary"/**' }
     omn.frameworks = 'AVFoundation'
   end
   s.subspec 'Akamai' do |aka|
