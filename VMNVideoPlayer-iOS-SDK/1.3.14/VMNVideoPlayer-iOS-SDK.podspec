@@ -38,12 +38,12 @@ Pod::Spec.new do |s|
     freebright.library = 'BCFreeWheelPlugin'
     freebright.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel"/**' }
   end
-  s.subspec 'BCCOmniture' do |bccomn|
-    bccomn.source_files = 'FrameworkSource/BCCOmniturePlugin/*.{h,a}'
-    bccomn.vendored_libraries = 'libBCCOmniturePluginLib'
-    bccomn.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniturePlugin"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniturePlugin"/**' }
+#  s.subspec 'BCCOmniture' do |bccomn|
+#    bccomn.source_files = 'FrameworkSource/BCCOmniturePlugin/*.{h,a}'
+#    bccomn.vendored_libraries = 'libBCCOmniturePluginLib'
+#    bccomn.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniturePlugin"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniturePlugin"/**' }
     #bccomn.frameworks =  'libBCCOmniturePluginLib'
-  end
+#  end
   s.subspec 'Omniture' do |omn|
     omn.source_files = 'FrameworkSource/BCCOmniturePlugin/ADMS_AppLibrary/*.{h,a}'
     omn.library = 'admsAppLibrary'
