@@ -3,10 +3,10 @@ Pod::Spec.new do |s|
   s.version   = '1.3.15'
   s.platform  = :ios
   s.summary   = "The VMNVideoPlayer SDK for iOS."
-  s.homepage  = ''
-  s.license   = ''
+  s.homepage  = 'https://github.com/Andrewbetts/VMNVideoPlayer-iOS-SDK'
+  s.license   = 'license'
   s.author    = { 'Brightcove' =>  '' }             
-  s.source    = { :git => 'git@github.com:Andrewbetts/VMNVideoPlayer-iOS-SDK.git', :branch => "1.3.15" }
+  s.source    = { :git => 'https://github.com/Andrewbetts/VMNVideoPlayer-iOS-SDK.git', :tag => '1.3.15'}
   s.requires_arc = false
   s.subspec 'Brightcove' do |br|
     br.source_files = 'FrameworkSource/BrightcoveiOSSDK/*.{h,a}'
@@ -45,6 +45,6 @@ Pod::Spec.new do |s|
   end
     s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SDKROOT)/usr/include/libxml2"', 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/VMNVideoPlayer-iOS-SDK/FrameworkSource/libVMNVideoPlayeriOSSDK"/**'}
     s.library = 'xml2'
-    s.dependency 'AdobeAppMeasurement', '3.2.1'
+ #   s.dependency 'AdobeAppMeasurement', '3.2.1'
     s.frameworks   = 'MessageUI', 'SystemConfiguration', 'CoreText', 'CoreLocation', 'QuartzCore', 'MediaPlayer', 'CoreMedia', 'AVFoundation', 'UIKit', 'Foundation', 'CoreGraphics'
 end
