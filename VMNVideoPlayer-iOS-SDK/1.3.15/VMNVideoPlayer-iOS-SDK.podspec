@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.license   = ''
   s.author    = { 'Brightcove' =>  '' }             
   s.source    = { :git => 'https://github.com/mtvn-player/VMNVideoPlayer-iOS.git', :tag => "#{s.version}" }
-  #s.source    = { :git => 'https://github.com/Andrewbetts/VMNVideoPlayer-iOS-SDK.git', :tag => "#{s.version}" }  
+  #s.source    = { :git => 'https://github.com/mpropstbrightcove/VMNVideoPlayer-iOS.git', :tag => "#{s.version}" }
   s.requires_arc = false
   s.subspec 'Brightcove' do |br|
     br.source_files = 'FrameworkSource/BrightcoveiOSSDK/*.{h,a}'
@@ -38,26 +38,14 @@ Pod::Spec.new do |s|
     freebright.library = 'BCFreeWheelPlugin'
     freebright.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCFreeWheel"/**' }
   end
-#  s.subspec 'BCCOmniture' do |bccomn|
-#    bccomn.source_files = 'FrameworkSource/BCCOmniturePlugin/*.{h,a}'
-#    bccomn.vendored_libraries = 'libBCCOmniturePluginLib'
-#    bccomn.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniturePlugin"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/BCCOmniturePlugin"/**' }
-    #bccomn.frameworks =  'libBCCOmniturePluginLib'
-#  end
-  s.subspec 'Omniture' do |omn|
-    omn.source_files = 'FrameworkSource/ADMS_AppLibrary/*.{h,a}'
-    omn.vendored_libraries = 'admsAppLibrary'
-        #omn.dependency
-    omn.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/ADMS_AppLibrary"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/ADMS_AppLibrary"/**' }
-    omn.frameworks = 'AVFoundation'
-  end
   s.subspec 'Akamai' do |aka|
     aka.source_files = 'FrameworkSource/AkamMAlibs/headers/*.{h}', 'FrameworkSource/AkamMAlibs/libs/**/*.{a}' 
-    aka.library = 'AKAMMediaExtensions'
+    aka.library = 'AKAMMediaExtensions-AV'
     aka.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/AkamMAlibs/headers"/**', 'LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/AkamMAlibs/libs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)" "$(SRCROOT)/Pods/VMNVideoPlayer-iOS-SDK/FrameworkSource/AkamMAlibs/libs/Debug-iphoneos"/**' }
     aka.frameworks = 'CoreMedia', 'AVFoundation'
   end
     s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SDKROOT)/usr/include/libxml2"', 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/VMNVideoPlayer-iOS-SDK/FrameworkSource/libVMNVideoPlayeriOSSDK"/**'}
     s.library = 'xml2'
+    s.dependency 'AdobeAppMeasurement', '3.2.1'
     s.frameworks   = 'MessageUI', 'SystemConfiguration', 'CoreText', 'CoreLocation', 'QuartzCore', 'MediaPlayer', 'CoreMedia', 'AVFoundation', 'UIKit', 'Foundation', 'CoreGraphics'
 end
