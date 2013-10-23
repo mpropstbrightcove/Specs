@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name      = 'VMNAD-iOS-SDK'
-  s.version   = 'bugfix'
+  s.version   = '1.3.1'
   s.platform  = :ios
   s.summary   = 'VMN AD SDK for iOS'
   s.homepage  = 'http://developer.viacom.com/mdp_download/mraid-sdk-2/'
   s.license   = ''
   s.author    = { 'Viacom' =>  'http://developer.viacom.com/mdp_download/mraid-sdk-2/' }             
-  s.source    = { :git => 'https://github.com/mtvn-player/VMNMRAIDSDK-iOS.git', :tag => 'bugfix' }
+  s.source    = { :git => 'https://github.com/mtvn-player/VMNMRAIDSDK-iOS.git', :tag => 'v1.3.1' }
   s.requires_arc = true
   s.preserve_paths = 'Framework/libViacomMRAID.a'
   s.resources = 'Framework/*.{png,js,html,jpg,gif,otf}'
