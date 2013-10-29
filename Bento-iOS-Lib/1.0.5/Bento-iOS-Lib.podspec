@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.requires_arc = false
   s.ios.xcconfig = {
 	'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/Bento-iOS-Lib/BentoLib"',
-	'OTHER_LDFLAGS' => '-weak_library "$(PODS_ROOT)/AdobeAppMeasurement"/libadmsAppLibrary.a'
+	'OTHER_LDFLAGS' => '-weak_library "$(PODS_ROOT)/AdobeAppMeasurement/libadmsAppLibrary.a"'
 	}
   s.source_files  = 'BentoLib/*.{h,m}'
   s.frameworks = 'Foundation', 'Security', 'SystemConfiguration'
