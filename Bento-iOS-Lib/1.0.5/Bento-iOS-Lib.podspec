@@ -9,8 +9,7 @@ Pod::Spec.new do |s|
   s.source    = { :git => 'https://github.com/mtvn-player/Bento-iOS-Lib.git', :tag => "#{s.version}" }
   s.requires_arc = false
   s.ios.xcconfig = {
-	'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/Bento-iOS-Lib/BentoLib"',
-	'OTHER_LDFLAGS' => '-weak_library "$(PODS_ROOT)/AdobeAppMeasurement/libadmsAppLibrary.a"'
+	'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/Bento-iOS-Lib/BentoLib"'
 	}
   s.source_files  = 'BentoLib/*.{h,m}'
   s.frameworks = 'Foundation', 'Security', 'SystemConfiguration'
