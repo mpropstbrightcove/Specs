@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
         }
   s.ios.resource_bundle = { 'ViacomMRAIDResources' => 'ViacomMRAID/ViacomMRAID/*.{png,js,html,jpg,otf,xib}' }
   s.source_files  = 'ViacomMRAID/ViacomMRAID/*.{h,m}'
-  s.frameworks = 'Foundation', 'UIKit'
+  s.frameworks = 'Foundation', 'UIKit', 'CoreText'
 end
 
