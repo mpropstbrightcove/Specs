@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name      = 'iOS-Ad-Component'
+  s.name      = 'VMN-iOS-Ad-Component'
   s.version   = '1.0'
   s.platform  = :ios
   s.summary   = 'Bento AD SDK for iOS'
