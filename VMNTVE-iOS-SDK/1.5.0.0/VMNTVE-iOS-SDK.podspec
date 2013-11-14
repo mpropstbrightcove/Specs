@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.weak_frameworks = 'Accounts', 'AdSupport', 'Social'
   s.source_files = 'ComponentSource/headers/*.h'
   s.dependency 'SSKeychain'
-  s.dependency 'Facebook-iOS-SDK', '3.8.0'
+  s.dependency 'Facebook-iOS-SDK', '3.9.0'
   s.dependency 'AFNetworking', '1.3.2'
   s.dependency 'SBJson', '~> 3.0.4'
   s.dependency 'SDWebImage', '3.5'
