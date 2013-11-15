@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.resources = 'ComponentSource/config/adobepass.p12', 'ComponentSource/bundle/TVEAuthResources.bundle'
   s.libraries = 'TVEAuthComponent-iOS', 'xml2'
   s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/VMNTVE-iOS-SDK/ComponentSource/lib/' }
-  s.frameworks = 'QuartzCore', 'CoreImage', SystemConfiguration', 'Security', 'CoreText', 'MessageUI', 'Twitter', 'MobileCoreServices', 'AssetsLibrary', 'MapKit', 'ImageIO'
+  s.frameworks = 'QuartzCore', 'CoreImage', 'SystemConfiguration', 'Security', 'CoreText', 'MessageUI', 'Twitter', 'MobileCoreServices', 'AssetsLibrary', 'MapKit', 'ImageIO'
   s.weak_frameworks = 'Accounts', 'AdSupport', 'Social'
   s.source_files = 'ComponentSource/headers/*.h'
   s.dependency 'SSKeychain'
