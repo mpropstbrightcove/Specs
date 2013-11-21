@@ -21,7 +21,8 @@ Pod::Spec.new do |s|
     vmnplayer.resources = 'FrameworkSource/libVMNVideoPlayeriOSSDK/VMNVideoPlayer.bundle'
     vmnplayer.preserve_paths = framework_path
     vmnplayer.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/VMNVideoPlayer-iOS-SDK/FrameworkSource/libVMNVideoPlayeriOSSDK"'}
-    vmnplayer.frameworks = 'CoreText', 'VMNVideoPlayer', 'MediaAccessibility'
+    vmnplayer.frameworks = 'CoreText', 'VMNVideoPlayer'
+    vmnplayer.weak_frameworks = 'MediaAccessibility'
   end
   s.subspec 'FreeWheel' do |free|
     framework_path = 'FrameworkSource/BCFreeWheel/AdManager.framework'
