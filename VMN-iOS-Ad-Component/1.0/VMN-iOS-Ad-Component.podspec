@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.source    = { :git => 'https://github.com/mtvn-player/Ad-SDK-iOS-V2.git', :tag => "#{s.version}" }
   s.requires_arc = false
   s.ios.xcconfig = {
-        'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/VMNAD-iOS-SDK/ViacomMRAID/ViacomMRAID"'
+        'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/VMN-iOS-Ad-Component/ViacomMRAID/ViacomMRAID"'
         }
   s.ios.resource_bundle = { 'ViacomMRAIDResources' => 'ViacomMRAID/ViacomMRAID/*.{png,js,html,jpg,otf,xib}' }
   s.source_files  = 'ViacomMRAID/ViacomMRAID/*.{h,m}'
