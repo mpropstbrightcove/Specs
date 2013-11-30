@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.source_files  = 'BentoLib/*.{h,m}'
   s.frameworks = 'Foundation', 'Security', 'SystemConfiguration'
   s.dependency 'AdobeAppMeasurement', '3.3.0'
-  s.dependency 'Comscore-iOS-SDK', '2.1307.04'
+  s.dependency 'Comscore-iOS-SDK', '2.1309.19'
   s.dependency 'NielsenID3Meter-iOS-SDK', '2.0.27'
   s.dependency 'VMN-iOS-Ad-Component', '1.0'
 end
