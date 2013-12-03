@@ -18,3 +18,4 @@ Pod::Spec.new do |s|
   s.dependency 'NielsenID3Meter-iOS-SDK', '2.0.27'
   s.dependency 'VMN-iOS-Ad-Component', '1.0'
 end
+
