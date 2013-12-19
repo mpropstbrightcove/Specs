@@ -17,5 +17,5 @@ Pod::Spec.new do |s|
   s.dependency 'TTTAttributedLabel', '~> 1.6.3'
   s.dependency 'MBProgressHUD', '~> 0.5'
   s.dependency 'SBJson', '~> 3.0.4'
-  s.dependency 'VMNSocialMedia-iOS-SDK', '~> 1.2'
+  s.dependency 'VMNSocialMedia-iOS-SDK', '~> 1.3'
 end

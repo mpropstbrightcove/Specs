@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-  s.name         = "VMNTVE-iOS-MTVX-SDK"
-  s.version      = "1.2.7.4"
+  s.name         = "VMNTVE-iOS-LOGO-SDK"
+  s.version      = "1.8.0.0"
   s.license      = ''
   s.platform     = :ios, '6.0'
   s.summary      = 'TVE Authentication Component for Native iOS represents a library for iOS devices. This is solution for TV Everywhere offers cross-domain single-sign-on authentication and authorization.'
@@ -23,5 +23,4 @@ Pod::Spec.new do |s|
   s.dependency 'hpple', '0.2.0'
   s.dependency 'TTTAttributedLabel', '~> 1.6.3'
   s.dependency 'VMNSocialMedia-iOS-SDK', '~> 1.3'
-  
 end
