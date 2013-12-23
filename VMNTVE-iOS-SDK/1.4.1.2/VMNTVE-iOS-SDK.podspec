@@ -18,4 +18,7 @@ Pod::Spec.new do |s|
   s.dependency 'MBProgressHUD', '~> 0.5'
   s.dependency 'SBJson', '~> 3.0.4'
   s.dependency 'VMNSocialMedia-iOS-SDK', '~> 1.2.0'
+  s.dependency 'SSKeychain'
+  s.dependency 'SDWebImage', '3.5'
+  s.dependency 'hpple', '0.2.0'
 end
