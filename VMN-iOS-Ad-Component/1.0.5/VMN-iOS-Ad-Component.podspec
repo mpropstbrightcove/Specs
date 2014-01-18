@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage  = 'http://developer.viacom.com/mdp_download/mraid-sdk-2/'
   s.license   = ''
   s.author    = { 'Viacom' =>  'http://developer.viacom.com' }
-  s.source    = { :git => 'https://github.com/mtvn-player/Ad-SDK-iOS-V2.git', :tag => "#{s.version}" }
+  s.source    = { :git => 'https://github.com/mtvn-player/VMNAdComponent-iOS-Lib.git', :tag => "#{s.version}" }
   s.requires_arc = false
   s.ios.xcconfig = {
         'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/VMN-iOS-Ad-Component/ViacomMRAID/ViacomMRAID"'
